@@ -24,4 +24,8 @@ export class EmployeeService {
     return this.http.put(environment.apiURL+'/Employee/'+formData.EmployeeID,formData);
      
    }
+
+   deleteEmployee(id:number){
+     return this.http.delete(environment.apiURL+'/Employee/'+id);
+   }
 }
