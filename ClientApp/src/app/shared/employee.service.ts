@@ -19,4 +19,9 @@ export class EmployeeService {
     this.http.get(environment.apiURL +'/Employee')
     .toPromise().then(res=>this.list = res as Employee[]);
   }
+
+  putEmployee(formData : Employee){
+    return this.http.put(environment.apiURL+'/Employee/'+formData.EmployeeID,formData);
+     
+   }
 }
